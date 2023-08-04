@@ -19,7 +19,7 @@ const EmojiGenerator = () => {
     setResponse("")
     // Wrap the API request in try catch
     try {
-      const response = await fetch("http://localhost:500/titleToEmoji", {
+      const response = await fetch("https://purgeai-server-4e626c2883f7.herokuapp.com/titleToEmoji", {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",

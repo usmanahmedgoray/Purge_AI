@@ -20,7 +20,7 @@ const Sql = () => {
     setResponse("")
     // Wrap the API request in try catch
     try {
-      const response = await fetch("http://localhost:500/sqlGen", {
+      const response = await fetch("https://purgeai-server-4e626c2883f7.herokuapp.com/sqlGen", {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",

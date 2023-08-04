@@ -28,7 +28,7 @@ const TranslateCode = () => {
     setIsActive(true)
 
     try {
-      const response = await fetch("http://localhost:500/translateCode", {
+      const response = await fetch("https://purgeai-server-4e626c2883f7.herokuapp.com/translateCode", {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
