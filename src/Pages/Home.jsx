@@ -24,6 +24,7 @@ const Home = () => {
   useEffect(() => {
     if (inView) {
       control.start("visible");
+      control.set({transition:{duration:0.1}})
     } else {
       control.start("hidden");
     }
@@ -34,7 +35,7 @@ const Home = () => {
       <section className="text-gray-600 body-font">
         <div className="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-4xl text-5xl mb-4 font-bold text-gray-500">DO YOUR TASKS WITH -
+            <h1 className="title-font sm:text-5xl text-4xl mb-4 font-bold text-gray-500">DO YOUR TASKS WITH -
               <br className="hidden lg:inline-block" />PURGE AI
             </h1>
             <p className="mb-8 leading-relaxed text-xl">There is a lot of little tasks that we need to perform in our daily life and to do that tasks we need tools for each task. Purge AI provides a range of AI tools that cater to different needs and tasks. You can access the multiple AI tools on a single platform </p>
@@ -47,15 +48,17 @@ const Home = () => {
       </section>
 
       {/* Section 02 -> Introduction for the tools of AI provided by react app */}
-      <section className="text-gray-600 body-font my-24">
-        <motion.div ref={ref} variants={boxVariant} initial="hidden" animate={control} className="flex justify-center items-center">
+      <section className="text-gray-600 body-font my-24 flex items-center flex-col">
+        <div className="flex items-center flex-col w-1/2 relative right-[2rem] ml-3 md:left-0">
+        <motion.div ref={ref} variants={boxVariant} initial={{x:0,opacity:0}} animate={control} className="flex justify-center items-center w-[13rem]">
           <i className="fa-solid fa-screwdriver-wrench text-3xl mx-3"></i>
           <h1 className="text-5xl">TOOLS</h1>
         </motion.div>
-        <motion.div ref={ref} variants={boxVariant} initial="hidden" animate={control} className="flex justify-center items-center mt-9">
+        <motion.div ref={ref} variants={boxVariant} initial={{x:0,opacity:0}} animate={control} className="flex justify-center items-center mt-9 w-[13rem] md:w-[50rem]">
           <p className=" text-xl font-normal text-center">There is lot of AI Tools all around the globe
             <br className="hidden lg:inline-block" /> But Tools that is provided by Purge AI is basically 5 Tools that are given below: </p>
         </motion.div>
+        </div>
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
             <img alt="feature" className="object-cover object-center h-full w-full" src="/google-deepmind-rXy5Zlmw3qY-unsplash-min_11zon.jpg" />
@@ -69,9 +72,11 @@ const Home = () => {
               <div  className="flex-grow">
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">SQL Generator</h2>
                 <p className="leading-relaxed text-base">You can simply provide your prompt data in text form and get simply SQL Query of that data through AI</p>
-                <Link to="/sql" className="mt-3 text-indigo-500 flex items-center hover:text-lg">Try Now!
-                  <i className="fa-solid fa-arrow-right mx-4 relative top-0.5 hover:mx-6 "></i>
+                <div className="flex justify-center lg:justify-start">
+                <Link to="/bugfixer" className="mt-3 text-indigo-500 flex items-center hover:text-lg">Try Now!
+                  <i className="fa-solid fa-arrow-right mx-4 relative top-0.5 hover:mx-6"></i>
                 </Link>
+                </div>
               </div>
             </div>
             {/* Add the basic introduction and provide link for Python Bug Fixer */}
@@ -82,9 +87,11 @@ const Home = () => {
               <div className="flex-grow">
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Python Bug Fixer</h2>
                 <p className="leading-relaxed text-base">You can simply provide your python code in prompt section and you shall be get simply bug free Python piece of code through AI</p>
+                <div className="flex justify-center lg:justify-start">
                 <Link to="/bugfixer" className="mt-3 text-indigo-500 flex items-center hover:text-lg">Try Now!
                   <i className="fa-solid fa-arrow-right mx-4 relative top-0.5 hover:mx-6"></i>
                 </Link>
+                </div>
               </div>
             </div>
             {/* Add the basic introduction and provide link for Code Translator */}
@@ -95,9 +102,11 @@ const Home = () => {
               <div className="flex-grow">
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Code Translator</h2>
                 <p className="leading-relaxed text-base">You can simply provide a piece of code in a particular programming language and Yot shall be get piece of code in another programming language that are choosed by user through AI</p>
-                <Link to="/translatecode" className="mt-3 text-indigo-500 flex items-center hover:text-lg">Try Now!
+                <div className="flex justify-center lg:justify-start">
+                <Link to="/bugfixer" className="mt-3 text-indigo-500 flex items-center hover:text-lg">Try Now!
                   <i className="fa-solid fa-arrow-right mx-4 relative top-0.5 hover:mx-6"></i>
                 </Link>
+                </div>
               </div>
             </div>
             {/* Add the basic introduction and provide link for Correct Grammar */}
@@ -108,9 +117,11 @@ const Home = () => {
               <div className="flex-grow">
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Correct Grammar</h2>
                 <p className="leading-relaxed text-base">You can simply provide a paragraph or sentence that you want to correct and You shall get sentence/paragraph in correct form through AI</p>
-                <Link to="/correctgrammar" className="mt-3 text-indigo-500 flex items-center hover:text-lg">Try Now!
+                <div className="flex justify-center lg:justify-start">
+                <Link to="/bugfixer" className="mt-3 text-indigo-500 flex items-center hover:text-lg">Try Now!
                   <i className="fa-solid fa-arrow-right mx-4 relative top-0.5 hover:mx-6"></i>
                 </Link>
+                </div>
               </div>
             </div>
             {/* Add the basic introduction and provide link for Emoji Generator */}
@@ -121,9 +132,11 @@ const Home = () => {
               <div className="flex-grow">
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Emoji Generator</h2>
                 <p className="leading-relaxed text-base">Convert the titles of Movies, Dramas and Books to an Emoji. Simply input the title and get the emoji of that title through AI</p>
-                <Link to="/emojigenerator" className="mt-3 text-indigo-500 flex items-center hover:text-lg">Try Now!
+                <div className="flex justify-center lg:justify-start">
+                <Link to="/bugfixer" className="mt-3 text-indigo-500 flex items-center hover:text-lg">Try Now!
                   <i className="fa-solid fa-arrow-right mx-4 relative top-0.5 hover:mx-6"></i>
                 </Link>
+                </div>
               </div>
             </div>
           </div>
