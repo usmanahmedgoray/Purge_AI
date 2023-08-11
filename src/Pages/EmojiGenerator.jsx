@@ -74,7 +74,7 @@ const EmojiGenerator = () => {
 
 {/* Add the response Area when is not available set the default statement */}
 {Response?
-<div className="w-[32rem] border-4 rounded-lg p-3 shadow-lg bg-gray-700 flex justify-between items-center ">
+<div className="w-[22rem] md:w-[32rem] border-4 rounded-lg p-3 shadow-lg bg-gray-700 flex justify-between items-center ">
      <h1 className="text-2xl">{Response.content}</h1>
      <AiFillCopy className="text-3xl text-white cursor-pointer active:text-2xl " onClick ={handleCopy}/>
 </div>
