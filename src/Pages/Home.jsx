@@ -41,7 +41,7 @@ const Home = () => {
 
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img className="object-cover object-center rounded" alt="hero" src="/andrea-de-santis-zwd435-ewb4-unsplash.jpg" />
+            <img className="object-cover object-center rounded" alt="hero" src="/andrea-de-santis-zwd435-ewb4-unsplash-min_11zon.jpg" />
           </div>
         </div>
       </section>
@@ -58,7 +58,7 @@ const Home = () => {
         </motion.div>
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-            <img alt="feature" className="object-cover object-center h-full w-full" src="/google-deepmind-rXy5Zlmw3qY-unsplash.jpg" />
+            <img alt="feature" className="object-cover object-center h-full w-full" src="/google-deepmind-rXy5Zlmw3qY-unsplash-min_11zon.jpg" />
           </div>
           <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
             {/* Add the basic introduction and provide link for SQL Generator */}
