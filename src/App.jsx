@@ -21,8 +21,8 @@ const App = () => {
     {/* Add the routes to navigate */}
     <Routes>
       <Route path="/" exact element={<Home/>}/>
-      <Route path="/sql" exact element={<Sql/>}/>
-      <Route path="/translatecode" element={<TranslateCode/>}/>
+      <Route path="/sql4" exact element={<Sql/>}/>
+      <Route path="/translatecode4" element={<TranslateCode/>}/>
       <Route path="/emojigenerator" element={<EmojiGenerator/>}/>
       <Route path="/correctgrammar" element={<CorrectGrammar/>}/>
       <Route path="/bugfixer" element={<BugFixer/>}/>
