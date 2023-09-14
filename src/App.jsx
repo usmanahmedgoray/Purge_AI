@@ -21,13 +21,13 @@ const App = () => {
     {/* Add the routes to navigate */}
     <Routes>
       <Route path="/" exact element={<Home/>}/>
-      <Route path="/sql4" exact element={<Sql/>}/>
-      <Route path="/translatecode4" element={<TranslateCode/>}/>
-      <Route path="/emojigenerator2" element={<EmojiGenerator/>}/>
-      <Route path="/correctgrammar2" element={<CorrectGrammar/>}/>
-      <Route path="/bugfixe2r" element={<BugFixer/>}/>
-      <Route path="/privacypolicy2" element={<PrivacyPolicy/>}/>
-      <Route path="/contactme2" element={<Contact/>}/>
+      <Route path="/sql" exact element={<Sql/>}/>
+      <Route path="/translatecode" element={<TranslateCode/>}/>
+      <Route path="/emojigenerator" element={<EmojiGenerator/>}/>
+      <Route path="/correctgrammar" element={<CorrectGrammar/>}/>
+      <Route path="/bugfixer" element={<BugFixer/>}/>
+      <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
+      <Route path="/contactme" element={<Contact/>}/>
       <Route path="/about" element={<About/>}/>
     </Routes>
     {/* Add the Footer */}
